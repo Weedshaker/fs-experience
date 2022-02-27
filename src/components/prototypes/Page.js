@@ -1,13 +1,16 @@
 // @ts-check
 
-import {Shadow} from '../event-driven-web-components-prototypes/src/Shadow.js'
+/* global self */
+/* global localStorage */
+
+import { Shadow } from '../event-driven-web-components-prototypes/src/Shadow.js'
 
 export default class Page extends Shadow() {
-  constructor() {
+  constructor () {
     super()
 
     this.scrollY = 0
-    this.routeListener = event => this.scrollY = self.scrollY
+    this.routeListener = event => (this.scrollY = self.scrollY)
     this.playListener = event => this.videos.forEach(video => {
       if (video === event.target) {
         video.classList.add('playing')
@@ -23,37 +26,59 @@ export default class Page extends Shadow() {
       let nextVideo = null
       if ((nextVideo = this.videos[this.videos.indexOf(event.target) + 1])) nextVideo.play()
     }
+    this.timeupdateListener = event => {
+      if (this.timeupdateTimeout) return
+      const target = event.target
+      this.timeupdateTimeout = setTimeout(() => {
+        this.timeupdateTimeout = null
+        let src
+        if ((src = target.src || target.querySelector('source').src)) localStorage.setItem(src, target.currentTime)
+      }, 1000)
+    }
+    this.loadedmetadataListener = event => {
+      let src
+      if ((src = event.target.src || event.target.querySelector('source').src)) event.target.currentTime = localStorage.getItem(src)
+    }
   }
-  connectedCallback() {
+
+  connectedCallback () {
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     document.body.addEventListener('route', this.routeListener)
-    this.root.addEventListener('play', this.playListener, {capture: true})
-    this.root.addEventListener('ended', this.endedListener, {capture: true})
+    this.root.addEventListener('play', this.playListener, { capture: true })
+    this.root.addEventListener('ended', this.endedListener, { capture: true })
+    this.root.addEventListener('loadedmetadata', this.loadedmetadataListener, { capture: true, once: true })
+    this.root.addEventListener('timeupdate', this.timeupdateListener, { capture: true })
     self.scrollTo(0, this.scrollY)
   }
+
   disconnectedCallback () {
     document.body.removeEventListener('route', this.routeListener)
     this.root.removeEventListener('play', this.playListener)
     this.root.removeEventListener('ended', this.endedListener)
+    this.root.removeEventListener('loadedmetadata', this.loadedmetadataListener)
+    this.root.removeEventListener('timeupdate', this.timeupdateListener)
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.h2
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector('style[_css]')
   }
-  renderCSS() {
+
+  renderCSS () {
     this.css = /* CSS */`
       :host {
         display: block;

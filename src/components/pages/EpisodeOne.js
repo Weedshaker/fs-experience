@@ -3,7 +3,7 @@
 import Page from '../prototypes/Page.js'
 
 export default class TutorialOne extends Page {
-  renderHTML() {
+  renderHTML () {
     this.html = /* HTML */`
       <h2>Episode One - Hermann von der freien KMU</h2>
       <video controls="" width="100%" height="auto" poster="./img/2022-02-17_Hermann-Rohner_Freie-KMU.png">
