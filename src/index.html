@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Driven Web Components Tutorial</title>
+</head>
+<body>
+  <c-navigation></c-navigation>
+  <c-router mode=hash routes="[
+    {
+      'name': 'episode-one',
+      'path': '../../../components/pages/EpisodeOne.js',
+      'regExp': '/^#\/$/'
+    },
+    {
+      'name': 'episode-one',
+      'path': '../../../components/pages/EpisodeOne.js',
+      'regExp': '/^#\/one/'
+    }
+  ]"></c-router>
+  <script rel=preload type=module>
+    import('./components/Navigation.js').then(module => {
+      if (!customElements.get('c-navigation')) customElements.define('c-navigation', module.default)
+    })
+    import('./components/event-driven-web-components-router/src/Router.js').then(module => {
+      if (!customElements.get('c-router')) customElements.define('c-router', module.default)
+    })
+    self.Environment = {
+      mobileBreakpoint: '600px'
+    }
+  </script>
+  <style>
+    html {
+      --color: white;
+      --a-color: white;
+      --a-color-active: coral;
+      --a-color-hover: lightblue;
+      --border: 2px solid lightblue;
+      background-color: black;
+    }
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      width: 97vw;
+    }
+  </style>
+</body>
+</html>
