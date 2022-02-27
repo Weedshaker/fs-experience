@@ -36,8 +36,8 @@ export default class Page extends Shadow() {
       }, 1000)
     }
     this.loadedmetadataListener = event => {
-      let src
-      if ((src = event.target.src || event.target.querySelector('source').src)) event.target.currentTime = localStorage.getItem(src)
+      let src, currentTime
+      if ((src = event.target.src || event.target.querySelector('source').src) && (currentTime = localStorage.getItem(src))) event.target.currentTime = currentTime
     }
   }
 
