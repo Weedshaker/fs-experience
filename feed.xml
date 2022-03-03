@@ -31,14 +31,14 @@
     <itunes:category text="Interviews"/>
 
     <item>
-      <guid isPermaLink="true">http://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4</guid>
+      <guid isPermaLink="true">https://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4</guid>
       <title>Episode One - Hermann von der freien KMU</title>
       <link>https://fs-experience.ch/src/#/one</link>
       <description>Hermann von der freien KMU</description>
       <pubDate>Thu, 17 Feb 2022 19:00:00 CET</pubDate>
       <author>Weedshaker</author>
       <content:encoded><![CDATA[<p>Hermann von der freien KMU</p>]]></content:encoded>
-      <enclosure type="video/mp4" url="http://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4"/>
+      <enclosure type="video/mp4" url="https://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4"/>
       <itunes:title>Episode One - Hermann von der freien KMU</itunes:title>
       <itunes:author>Weedshaker</itunes:author>
       <itunes:image href="https://fs-experience.ch/src/img/2022-02-17_Hermann-Rohner_Freie-KMU.png"/>
