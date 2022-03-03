@@ -54,9 +54,11 @@ export default class Navigation extends Shadow() {
         height: 100%;
         padding: 1em;
         box-sizing: border-box;
+        border-right: 1px solid var(--color);
       }
       :host ul {
         padding: 0;
+        list-style: none;
       }
       :host a {
         color: var(--a-color);
@@ -67,17 +69,31 @@ export default class Navigation extends Shadow() {
       :host a:hover {
         color: var(--a-color-hover);
       }
-      :host .telegram {
+      :host .source {
         background: url('./img/fs-experience.png') no-repeat;
         min-height: 320px;
+        background-size: contain;
+      }
+      :host .source ul {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+      }
+      :host .source ul img {
+        height: 1.5em;
+        width: 1.5em;
+      }
+      :host .source p {
+        text-shadow: 0.15em 0.15em 0.3em var(--a-color);
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         nav {
           position: inherit;
           width: 100vw;
+          border-bottom: 1px solid var(--color);
+          border-right: 0;
         }
-        :host .telegram {
-          background: 0;
+        :host .source {
           min-height: 0;
         }
       }
@@ -90,8 +106,12 @@ export default class Navigation extends Shadow() {
         <ul>
           <li><a href="#/one" alt-href="#/">Episode One - Hermann von der freien KMU</a></li>
         </ul>
-        <div class="telegram">
-          <a href="https://t.me/fsexperience" target="_blank">Telegram</a>
+        <div class="source">
+          <p>fs-experience.ch</p>
+          <ul>
+            <li><a href="../feed.rss"><img src="https://i.imgur.com/fZIDSoj.png"></a></li>
+            <li><a href="https://t.me/fsexperience" target="_blank"><img src="https://i.imgur.com/a3GLUkU.png"></li>
+          </ul>
         <div>
       </nav>
     `

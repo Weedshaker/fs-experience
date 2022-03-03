@@ -83,7 +83,7 @@ export default class Page extends Shadow() {
       :host {
         display: block;
         color: var(--color);
-        width: 57vw;
+        width: 60vw;
         padding: 1em;
         box-sizing: border-box;
       }
