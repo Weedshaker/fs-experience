@@ -109,8 +109,8 @@ export default class Navigation extends Shadow() {
         <div class="source">
           <p>fs-experience.ch</p>
           <ul>
-            <li><a href="../feed.rss"><img src="https://i.imgur.com/fZIDSoj.png"></a></li>
-            <li><a href="https://t.me/fsexperience" target="_blank"><img src="https://i.imgur.com/a3GLUkU.png"></li>
+            <li><a href="../feed.rss"><img src="./img/rss.png"></a></li>
+            <li><a href="https://t.me/fsexperience" target="_blank"><img src="./img/telegram.png"></li>
           </ul>
         <div>
       </nav>
