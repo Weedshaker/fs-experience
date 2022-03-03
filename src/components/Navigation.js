@@ -43,9 +43,6 @@ export default class Navigation extends Shadow() {
 
   renderCSS () {
     this.css = /* CSS */`
-      :host, nav {
-        width: 40vw;
-      }
       nav {
         display: flex;
         flex-direction: column;
@@ -55,6 +52,8 @@ export default class Navigation extends Shadow() {
         padding: 1em;
         box-sizing: border-box;
         border-right: 1px solid var(--color);
+        width: 40vw;
+        overflow: auto;
       }
       :host ul {
         padding: 0;
