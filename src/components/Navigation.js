@@ -70,7 +70,6 @@ export default class Navigation extends Shadow() {
       }
       :host .source {
         background: url('./img/fs-experience.png') no-repeat;
-        min-height: 320px;
         background-size: contain;
       }
       :host .source ul {
