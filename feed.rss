@@ -20,7 +20,9 @@
     <image>
       <link>https://fs-experience.ch</link>
       <title>fs-experience - satire podcast</title>
-      <url>https://fs-experience.ch/src/img/fs-experience.png</url>
+      <url>https://fs-experience.ch/src/img/fs-experience_32x32.jpg</url>
+      <width>32</width>
+	    <height>32</height>
     </image>
     <itunes:type>episodic</itunes:type>
     <itunes:summary>fs-experience - satire podcast: Aus der Ostschweiz für lokale Netzwerke.</itunes:summary>
