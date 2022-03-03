@@ -9,7 +9,10 @@ export default class TutorialOne extends Page {
       <video controls="" width="100%" height="auto" poster="./img/2022-02-17_Hermann-Rohner_Freie-KMU.png">
         <source src="http://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4" type="video/mp4">
         <p>Your browser doesn't support HTML5 video. Here is a <a href="http://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4">link to the video</a> instead.</p>
-      </video><br>
+      </video>
+      <a href="http://starsystems.ch/fs-experience/2022-02-17_Hermann-Rohner_Freie-KMU.mp4" download target="_blank">Download</a>
+      <br>
+      <br>
       show notes:
       <ul>
       <li><a href="https://freiekmu.ch/" target="_blank">https://freiekmu.ch/</a>
