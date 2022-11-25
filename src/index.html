@@ -11,22 +11,38 @@
   <title>fs-experience - satire podcast</title>
 </head>
 <body>
-  <c-navigation></c-navigation>
-  <c-router mode=hash routes="[
-    {
-      'name': 'episode-one',
-      'path': '../../../components/pages/EpisodeOne.js',
-      'regExp': '/^#\/$/'
-    },
+  <!--<c-navigation></c-navigation>-->
+  <c-navigation-coin></c-navigation-coin>
+  <!--
     {
       'name': 'episode-one',
       'path': '../../../components/pages/EpisodeOne.js',
       'regExp': '/^#\/one/'
     }
-  ]"></c-router>
+  -->
+  <c-price-api>
+    <c-router mode=hash routes="[
+      {
+        'name': 'calc-gram',
+        'path': '../../../components/pages/CoinCalcGram.js',
+        'regExp': '/^#\/$/'
+      },
+      {
+        'name': 'calc-gram',
+        'path': '../../../components/pages/CoinCalcGram.js',
+        'regExp': '/^#\/calc-gram/'
+      }
+    ]"></c-router>
+  </c-price-api>
   <script rel=preload type=module>
-    import('./components/Navigation.js').then(module => {
+    /*import('./components/controllers/Navigation.js').then(module => {
       if (!customElements.get('c-navigation')) customElements.define('c-navigation', module.default)
+    })*/
+    import('./components/controllers/PriceApi.js').then(module => {
+      if (!customElements.get('c-price-api')) customElements.define('c-price-api', module.default)
+    })
+    import('./components/controllers/NavigationCoin.js').then(module => {
+      if (!customElements.get('c-navigation-coin')) customElements.define('c-navigation-coin', module.default)
     })
     import('./components/event-driven-web-components-router/src/Router.js').then(module => {
       if (!customElements.get('c-router')) customElements.define('c-router', module.default)
@@ -37,13 +53,14 @@
   </script>
   <style>
     html {
-      --color: white;
-      --a-color: white;
-      --a-color-active: coral;
-      --a-color-hover: lightblue;
-      --border: 2px solid lightblue;
-      background-color: black;
+      --color: black;
+      --a-color: black;
+      --a-color-active: blue;
+      --a-color-hover: darkblue;
+      --border: 2px solid darkblue;
+      background-color: lightgoldenrodyellow;
       color: var(--color);
+      font-family: sans-serif;
     }
     body {
       display: flex;

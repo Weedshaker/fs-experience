@@ -3,7 +3,7 @@
 /* global self */
 /* global location */
 
-import { Shadow } from './event-driven-web-components-prototypes/src/Shadow.js'
+import { Shadow } from '../event-driven-web-components-prototypes/src/Shadow.js'
 
 export default class Navigation extends Shadow() {
   constructor () {
@@ -55,6 +55,11 @@ export default class Navigation extends Shadow() {
         width: 40vw;
         overflow: auto;
       }
+      nav ul > li {
+        border: 1px solid var(--color);
+        border-radius: 4px;
+        padding: .5em;
+      }
       :host ul {
         padding: 0;
         list-style: none;
@@ -68,7 +73,7 @@ export default class Navigation extends Shadow() {
       :host a:hover {
         color: var(--a-color-hover);
       }
-      :host .source {
+      :host .source:not(.no-bg) {
         background: url('./img/fs-experience.png') no-repeat;
         background-size: contain;
       }
