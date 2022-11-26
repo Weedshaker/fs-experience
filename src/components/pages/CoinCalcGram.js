@@ -141,7 +141,7 @@ export default class TutorialOne extends Page {
 
   renderHTML () {
     this.html = /* HTML */`
-      <h1>Silbermünzen </h1>
+      <h1>Silbermünzen</h1>
       <h2>in Gramm zu Fiat-CHF</h2>
       <hr>
       <p class=info>Gewicht in Gramm der unterstützten Silbermünzen *</p>
