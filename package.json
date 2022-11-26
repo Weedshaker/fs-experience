@@ -1,7 +1,7 @@
 {
   "name": "fs-event",
   "version": "0.0.1",
-  "description": "satire podcast",
+  "description": "Silbermünzen",
   "main": "./index.html",
   "scripts": {
     "fix": "standard --fix",
