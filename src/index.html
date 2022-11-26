@@ -11,16 +11,16 @@
   <title>fs-experience - satire podcast</title>
 </head>
 <body>
-  <!--<c-navigation></c-navigation>-->
-  <c-navigation-coin></c-navigation-coin>
-  <!--
-    {
-      'name': 'episode-one',
-      'path': '../../../components/pages/EpisodeOne.js',
-      'regExp': '/^#\/one/'
-    }
-  -->
   <c-price-api>
+    <!--<c-navigation></c-navigation>-->
+    <c-navigation-coin></c-navigation-coin>
+    <!--
+      {
+        'name': 'episode-one',
+        'path': '../../../components/pages/EpisodeOne.js',
+        'regExp': '/^#\/one/'
+      }
+    -->
     <c-router mode=hash routes="[
       {
         'name': 'calc-gram',
@@ -64,6 +64,11 @@
       font-family: sans-serif;
     }
     body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+    }
+    c-price-api {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;

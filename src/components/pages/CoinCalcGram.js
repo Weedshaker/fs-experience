@@ -6,26 +6,25 @@ export default class TutorialOne extends Page {
   constructor () {
     super()
 
-    this.inputId = 'gram-to-fiat-chf'
     this.changeListener = event => {
-      this.root.querySelector('.loader').classList.add('show')
       const input = event.composedPath()[0]
-      this.dispatchEvent(new CustomEvent('request-' + input.getAttribute('id'), {
-        detail: {
-          id: input.getAttribute('id'),
-          value: input.value,
-          target: input
-        },
-        bubbles: true,
-        cancelable: true,
-        composed: true
-      }))
+      if (input.getAttribute('id') === 'request-silver-coin-price-by-gram-in-chf') {
+        this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.add('show')
+        this.dispatchEvent(new CustomEvent(input.getAttribute('id'), {
+          detail: {
+            grams: input.value
+          },
+          bubbles: true,
+          cancelable: true,
+          composed: true
+        }))
+      }
     }
-    this.inputIdListener = event => {
+    this.answerSilverCoinPriceByGramInChfListener = event => {
       let resultNode
-      if ((resultNode = this.root.querySelector('#result-buy-' + event.detail.id))) {
-        resultNode.value = event.detail.value.toFixed(2)
-        this.root.querySelector('.loader').classList.remove('show')
+      if ((resultNode = this.root.querySelector('#' + event.detail.id))) {
+        resultNode.value = (event.detail.grams * event.detail.price).toFixed(2)
+        this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.remove('show')
       }
     }
   }
@@ -33,13 +32,13 @@ export default class TutorialOne extends Page {
   connectedCallback () {
     super.connectedCallback()
     this.root.addEventListener('change', this.changeListener)
-    document.body.addEventListener('answer-' + this.inputId, this.inputIdListener)
+    document.body.addEventListener('answer-silver-coin-price-by-gram-in-chf', this.answerSilverCoinPriceByGramInChfListener)
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
     this.root.removeEventListener('change', this.changeListener)
-    document.body.removeEventListener('answer-' + this.inputId, this.inputIdListener)
+    document.body.removeEventListener('answer-silver-coin-price-by-gram-in-chf', this.answerSilverCoinPriceByGramInChfListener)
   }
 
   renderCSS () {
@@ -142,18 +141,18 @@ export default class TutorialOne extends Page {
 
   renderHTML () {
     this.html = /* HTML */`
-      <h1>Silberrechner<h1>
-      <h2>Silbermünzen in Gramm zu Fiat-CHF</h2>
+      <h1>Silbermünzen </h1>
+      <h2>in Gramm zu Fiat-CHF</h2>
       <hr>
       <p class=info>Gewicht in Gramm der unterstützten Silbermünzen *</p>
       <div class="input">
-        <input type="number" id="${this.inputId}" name="${this.inputId}" min="1" placeholder="Wieviel Gramm?"><span>&nbsp;Gramm</span>
+        <input type="number" id="request-silver-coin-price-by-gram-in-chf" name="request-silver-coin-price-by-gram-in-chf" min="1" placeholder="Wieviel Gramm?"><span>&nbsp;Gramm</span>
       </div>
       <div class=equal>=</div>
-      <p class=info>Bei 83.5% Silbergehalt, siehe "* Unterstützte Silbermünzen"</p>
+      <p class=info>Silberwert bei 83.5% Silbergehalt:</p>
       <div class="input result">
-        <div class="loader">Loading...</div>
-        <input disabled type="number" id="result-buy-${this.inputId}" name="result-buy-${this.inputId}" placeholder="..."><span>&nbsp;CHF</span>
+        <div class="loader answer-silver-coin-price-by-gram-in-chf">Loading...</div>
+        <input disabled type="number" id="answer-silver-coin-price-by-gram-in-chf" name="answer-silver-coin-price-by-gram-in-chf" placeholder="..."><span>&nbsp;CHF</span>
       </div>
       <p class=info>Keine Garantie bezüglich Richtigkeit der Umrechnung.</p>
     `
