@@ -88,8 +88,11 @@ export default class PriceApi extends HTMLElement {
       let price
       if ((price = self.sessionStorage.getItem('silverPriceByOunceInUsd'))) return resolve(price)
       // https://api.metals.live/
-      fetch("https://api.metals.live/v1/spot/silver").then(res => res.json()).then(json => {
-        price = json[0].price
+      //fetch("https://api.metals.live/v1/spot/silver").then(res => res.json()).then(json => {
+      // https://www.monex.com/silver-prices/
+      fetch("https://api.monex.com:444/api/v1/Metals/spot/current?metals=SBSPOT").then(res => res.json()).then(json => {
+        //price = json[0].price
+        price = json.data[0].last
         self.sessionStorage.setItem('silverPriceByOunceInUsd', price)
         self.localStorage.setItem('silverPriceByOunceInUsd', price)
         return resolve(price)
