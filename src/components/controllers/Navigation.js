@@ -92,7 +92,7 @@ export default class Navigation extends Shadow() {
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         nav {
           position: inherit;
-          width: 100vw;
+          width: 100%;
           border-bottom: 1px solid var(--color);
           border-right: 0;
         }

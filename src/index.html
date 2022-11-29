@@ -71,7 +71,6 @@
     body {
       margin: 0;
       padding: 0;
-      width: 100vw;
     }
     c-price-api {
       display: flex;
@@ -79,13 +78,18 @@
       justify-content: space-between;
       margin: 0;
       padding: 0;
-      width: 100vw;
+      width: 100%;
     }
     code {
       font-size: xx-small;
       position: fixed;
       bottom: 0;
       right: 0;
+    }
+    @media only screen and (max-width: 600px) {
+      c-price-api > c-router, c-price-api > c-navigation-coin {
+        display: contents;
+      }
     }
   </style>
   <code>v. beta 0.0.2</code>
