@@ -11,12 +11,12 @@ export default class NavigationCoin extends Navigation {
 
     this.answerUsdToChfExchangeRate = event => {
       let resultNode
-      if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = event.detail.rate
+      if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = Number(event.detail.rate).toFixed(2)
     }
 
     this.answerSilverPriceByOunceInUsd = event => {
       let resultNode
-      if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = event.detail.price
+      if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = Number(event.detail.price).toFixed(2)
     }
 
     this.answerSilverPriceByGramInChfListener = event => {
@@ -51,6 +51,9 @@ export default class NavigationCoin extends Navigation {
       }
       :host .table table {
         width: min-content;
+      }
+      :host .table table img {
+        max-width: 100%;
       }
       details {
         cursor: pointer;
@@ -97,7 +100,8 @@ export default class NavigationCoin extends Navigation {
                 <table border="1">
                   <thead>
                     <tr>
-                      <th colspan="2">5-Fr.-Stück von 1931 - 1967</th>
+                      <th>5-Fr.-Stück von 1931 - 1967</th>
+                      <th><img src=https://www.schweizer-geld.ch/img/shop/icons/CH-BM-5.00-1931-1969.png /></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -121,7 +125,8 @@ export default class NavigationCoin extends Navigation {
                 <table border="1">
                   <thead>
                     <tr>
-                      <th colspan="2">2-Fr.-Stück von 1874 - 1967</th>
+                      <th>2-Fr.-Stück von 1874 - 1967</th>
+                      <th><img src=https://www.schweizer-geld.ch/img/shop/icons/CH-BM-2.00-1874-1967.png /></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -145,7 +150,8 @@ export default class NavigationCoin extends Navigation {
                 <table border="1">
                   <thead>
                     <tr>
-                      <th colspan="2">1-Fr.-Stück von 1875 - 1967</th>
+                      <th>1-Fr.-Stück von 1875 - 1967</th>
+                      <th><img src=https://www.schweizer-geld.ch/img/shop/icons/CH-BM-1.00-1875-1967.png /></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -156,6 +162,31 @@ export default class NavigationCoin extends Navigation {
                     <tr>
                       <td>Silbergehalt in Gramm</td>
                       <td>4.175 Gramm</td>
+                    </tr>
+                    <tr>
+                      <td>Silbergehalt in Prozent</td>
+                      <td>83.5%</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><a href="https://www.schweizer-geld.ch/bundesmuenzen-1-franken/de/12-1" target=_blank>Quelle</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <th>1/2-Fr.-Stück von 1875 - 1967</th>
+                      <th><img src=https://www.schweizer-geld.ch/img/shop/icons/CH-BM-0.50-1875-1967.png /></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gewicht</td>
+                      <td>2.5 Gramm</td>
+                    </tr>
+                    <tr>
+                      <td>Silbergehalt in Gramm</td>
+                      <td>2.0875g Gramm</td>
                     </tr>
                     <tr>
                       <td>Silbergehalt in Prozent</td>

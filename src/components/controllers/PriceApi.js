@@ -67,6 +67,9 @@ export default class PriceApi extends HTMLElement {
           composed: true
       })))
     }
+
+    this.timeLimit = 300000 // don't update within the time limit (60000ms = 1min)
+    this.timeLimitUsdExchange = 6000000
   }
 
   connectedCallback () {
@@ -84,20 +87,21 @@ export default class PriceApi extends HTMLElement {
   }
 
   get silverPriceByOunceInUsd () {
-    return (this._silverPriceByOunceInUsdPromise || (this._silverPriceByOunceInUsdPromise = new Promise(resolve => {
+    return new Promise(resolve => {
       let price
-      if ((price = self.sessionStorage.getItem('silverPriceByOunceInUsd'))) return resolve(price)
+      if ((price = this.getItem('silverPriceByOunceInUsd', 'sessionStorage'))) return resolve(price)
       // https://api.metals.live/
       //fetch("https://api.metals.live/v1/spot/silver").then(res => res.json()).then(json => {
       // https://www.monex.com/silver-prices/
       fetch("https://api.monex.com:444/api/v1/Metals/spot/current?metals=SBSPOT").then(res => res.json()).then(json => {
         //price = json[0].price
         price = json.data[0].last
-        self.sessionStorage.setItem('silverPriceByOunceInUsd', price)
-        self.localStorage.setItem('silverPriceByOunceInUsd', price)
+        this.setItem('silverPriceByOunceInUsd', price)
+        this.requestSilverPriceByOunceInUsd()
+        this.requestSilverPriceByGramInChf()
         return resolve(price)
-      }).catch(error => resolve(self.localStorage.getItem('silverPriceByOunceInUsd')))
-    })))
+      }).catch(error => resolve(this.getItem('silverPriceByOunceInUsd', 'localStorage')))
+    })
   }
 
   get silverPriceByGramInChf () {
@@ -115,15 +119,34 @@ export default class PriceApi extends HTMLElement {
   }
 
   get usdToChfExchangeRate () {
-    return (this._usdToChfExchangeRatePromise || (this._usdToChfExchangeRatePromise = new Promise(resolve => {
+    return new Promise(resolve => {
       let rate
-      if ((rate = self.sessionStorage.getItem('usdToChfExchangeRate'))) return resolve(rate)
+      if ((rate = this.getItem('usdToChfExchangeRate', 'sessionStorage', this.timeLimitUsdExchange))) return resolve(rate)
       fetch("https://api.exchangerate.host/convert?from=USD&to=CHF").then(res => res.json()).then(json => {
         rate = json.info.rate
-        self.sessionStorage.setItem('usdToChfExchangeRate', rate)
-        self.localStorage.setItem('usdToChfExchangeRate', rate)
+        this.setItem('usdToChfExchangeRate', rate)
+        this.requestUsdToChfExchangeRate()
         return resolve(rate)
-      }).catch(error => resolve(self.localStorage.getItem('usdToChfExchangeRate')))
-    })))
+      }).catch(error => resolve(this.getItem('usdToChfExchangeRate', 'localStorage')))
+    })
+  }
+
+  setItem (key, value) {
+    self.sessionStorage.setItem(key, value)
+    self.localStorage.setItem(key, value)
+    self.localStorage.setItem(key + '_time', String(Date.now()))
+  }
+
+  getItem (key, storage = 'both', timeLimit = this.timeLimit) {
+    switch (storage) {
+      case 'sessionStorage':
+        return self.localStorage.getItem(key + '_time') && Number(self.localStorage.getItem(key + '_time')) + timeLimit > Date.now()
+          ? self.sessionStorage.getItem(key)
+          : null
+      case 'localStorage':
+        return self.localStorage.getItem(key)
+      default:
+        return self.sessionStorage.getItem(key) || self.localStorage.getItem(key)
+    }
   }
 }
