@@ -57,7 +57,7 @@ export default class NavigationCoin extends Navigation {
       }
       details {
         cursor: pointer;
-        border: 1px solid var(--color);
+        border: 1px dotted var(--color);
         border-radius: 4px;
         padding: .5em .5em 0;
       }
@@ -88,7 +88,7 @@ export default class NavigationCoin extends Navigation {
     this.html = /* HTML */`
       <nav>
         <ul>
-          <li><a href="#/calc-gram" alt-href="#/">Gramm -> Fiat-CHF</a></li>
+          <li><a href="#/calc-gram" alt-href="#/">Silbermünzen in Gramm => Fiat-CHF</a></li>
           <li>Diese Seite ist im Aufbau...</li>
         </ul>
         <div>
