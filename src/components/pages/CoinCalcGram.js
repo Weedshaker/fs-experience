@@ -9,6 +9,7 @@ export default class TutorialOne extends Page {
     this.changeListener = event => {
       const input = event.composedPath()[0]
       if (input.getAttribute('id') === 'request-silver-coin-price-by-gram-in-chf') {
+        this.root.querySelector('#silver-gram').textContent = Number(input.value * 0.835).toFixed(3)
         this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.add('show')
         this.dispatchEvent(new CustomEvent(input.getAttribute('id'), {
           detail: {
@@ -24,6 +25,9 @@ export default class TutorialOne extends Page {
       let resultNode
       if ((resultNode = this.root.querySelector('#' + event.detail.id))) {
         resultNode.value = (event.detail.grams * event.detail.price).toFixed(2)
+        /** @type {number} */
+        let marketPrice
+        this.root.querySelector('#answer-silver-coin-price-by-gram-in-chf-market').textContent = 'CHF ' + (marketPrice = (resultNode.value * 1.077).toFixed(2)) + ' ≈ CHF ' + Math.ceil(marketPrice).toFixed(2) // + 10%
         this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.remove('show')
       }
     }
@@ -63,6 +67,12 @@ export default class TutorialOne extends Page {
       }
       .info {
         font-style: italic;
+      }
+      .small {
+        font-size: 0.8em;
+      }
+      .important {
+        font-weight: bold;
       }
       .equal {
         font-size: 6em;
@@ -148,13 +158,15 @@ export default class TutorialOne extends Page {
       <div class="input">
         <input type="number" id="request-silver-coin-price-by-gram-in-chf" name="request-silver-coin-price-by-gram-in-chf" min="1" placeholder="Wieviel Gramm?"><span>&nbsp;Gramm</span>
       </div>
+      <p class=info><span id="silver-gram">...</span>g Silber bei 83.5% Silbergehalt</p>
       <div class=equal>=</div>
-      <p class=info>Silberwert bei 83.5% Silbergehalt:</p>
+      <p class=info>Silberwert:</p>
       <div class="input result">
         <div class="loader answer-silver-coin-price-by-gram-in-chf">Loading...</div>
         <input disabled type="number" id="answer-silver-coin-price-by-gram-in-chf" name="answer-silver-coin-price-by-gram-in-chf" placeholder="..."><span>&nbsp;CHF</span>
       </div>
-      <p class=info>Keine Garantie bezüglich Richtigkeit der Umrechnung.</p>
+      <p class=info>+ 7.7% MWST: <span id="answer-silver-coin-price-by-gram-in-chf-market" class="important">...</span> geschätzter Tausch-/Marktwert der Münze(n)</p>
+      <p class="info small">Keine Garantie bezüglich Richtigkeit der Umrechnung.</p>
     `
   }
 }

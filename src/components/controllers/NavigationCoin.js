@@ -212,10 +212,10 @@ export default class NavigationCoin extends Navigation {
               <li><a href="https://de.wikipedia.org/wiki/Fiatgeld" target=_blank>Fiatgeld</a></li>
               <li><a href="https://www.swissmint.ch/swissmint/de/home/dokumentation/muenzkunde/160-jahre-ch-muenzwesen.html" target=_blank>160 Jahre Schweizerisches Münzwesen - Ein kurzer historischer Abriss</a></li>
               <li><a href="https://www.swissmint.ch/dam/swissmint/de/dokumente/dokumentation/numis-berichte/5liber-burkhard.pdf.download.pdf/5liber-burkhard.pdf" target=_blank>PAUL BURKHARD UND DER FÜNFLIBER - PRÄGEVARIANTEN BEI DEN 5-FR.-STÜCKEN</a></li>
-              <li><a href="https://www.macrotrends.net/1470/historical-silver-prices-100-year-chart" target=_blank>Historischer Silberpreis in Troy Unzen (1 Unze === 31.10 Gramm) - Höchststand von 1980 4'813$/kg - Tiefststand 1931 von 191$/kg</a></li>
+              <li><a href="https://www.macrotrends.net/1470/historical-silver-prices-100-year-chart" target=_blank>Historischer Silberpreis in Troy Unzen (1 Unze === 31.10 Gramm) - Höchststand von 1980 ca. $4'800/kg - Tiefststand von 1931 ca. $190/kg</a></li>
             </ol>
           </details>
-          <div id=rates>Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span>, 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span>, 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
+          <div id=rates>Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span> (<a href="https://exchangerate.host" target="_blank">api.exchangerate.host</a>), 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span> (<a href="https://www.monex.com/silver-prices/" target="_blank">monex.com</a>), 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
         <div>
       </nav>
     `
