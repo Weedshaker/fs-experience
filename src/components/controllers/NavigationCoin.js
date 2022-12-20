@@ -89,7 +89,10 @@ export default class NavigationCoin extends Navigation {
       <nav>
         <ul>
           <li><a href="#/calc-gram" alt-href="#/">Silbermünzen in Gramm => Fiat-CHF</a></li>
-          <li>Diese Seite ist im Aufbau...</li>
+          <li><a href="#/calc-fiver" alt-href="#/">5-Fr. Silbermünzen Stückzahl => Fiat-CHF</a></li>
+          <li><a href="#/calc-twoer" alt-href="#/">2-Fr. Silbermünzen Stückzahl => Fiat-CHF</a></li>
+          <li><a href="#/calc-oner" alt-href="#/">1-Fr. Silbermünzen Stückzahl => Fiat-CHF</a></li>
+          <li><a href="#/calc-halfer" alt-href="#/">1/2-Fr. Silbermünzen Stückzahl => Fiat-CHF</a></li>
         </ul>
         <div>
           <div class="source no-bg">
@@ -202,18 +205,21 @@ export default class NavigationCoin extends Navigation {
           </div>
           <br>
           <details>
-            <summary>Rettet die Schweizerfranken Silbermünzen</summary>
-            Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen (CBDC)!
-          </details>
-          <br>
-          <details>
             <summary>Quellen - Externe Links</summary>
             <ol>
-              <li><a href="https://de.wikipedia.org/wiki/Fiatgeld" target=_blank>Fiatgeld</a></li>
               <li><a href="https://www.swissmint.ch/swissmint/de/home/dokumentation/muenzkunde/160-jahre-ch-muenzwesen.html" target=_blank>160 Jahre Schweizerisches Münzwesen - Ein kurzer historischer Abriss</a></li>
               <li><a href="https://www.swissmint.ch/dam/swissmint/de/dokumente/dokumentation/numis-berichte/5liber-burkhard.pdf.download.pdf/5liber-burkhard.pdf" target=_blank>PAUL BURKHARD UND DER FÜNFLIBER - PRÄGEVARIANTEN BEI DEN 5-FR.-STÜCKEN</a></li>
               <li><a href="https://www.macrotrends.net/1470/historical-silver-prices-100-year-chart" target=_blank>Historischer Silberpreis in Troy Unzen (1 Unze === 31.10 Gramm) - Höchststand von 1980 ca. $4'800/kg - Tiefststand von 1931 ca. $190/kg</a></li>
+              <li><a href="https://www.schweizer-geld.ch/" target=_blank>schweizer-geld.ch</a></li>
+              <li><a href="https://www.numis.ch/schweizer-muenzen/5-franken-1931-1969/index.php" target=_blank>Auflagen in Mio.</a></li>
+              <li><a href="https://de.wikipedia.org/wiki/Fiatgeld" target=_blank>Fiatgeld</a></li>
             </ol>
+          </details>
+          <br>
+          <details>
+            <summary>Rettet die Schweizerfranken Silbermünzen</summary>
+            Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
+            <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Trete unserer Telegramgruppe bei und tausche dich mit uns aus. Zum Beispiel: Wo es Silbermünzen zu retten gibt...</a>
           </details>
           <div id=rates>Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span> (<a href="https://exchangerate.host" target="_blank">api.exchangerate.host</a>), 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span> (<a href="https://www.monex.com/silver-prices/" target="_blank">monex.com</a>), 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
         <div>

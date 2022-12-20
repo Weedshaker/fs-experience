@@ -2,13 +2,17 @@
 
 import Page from '../prototypes/Page.js'
 
-export default class TutorialOne extends Page {
+export default class CoinCalcGram extends Page {
   constructor () {
     super()
 
     this.changeListener = event => {
-      const input = event.composedPath()[0]
-      if (input.getAttribute('id') === 'request-silver-coin-price-by-gram-in-chf') {
+      const input = event.composedPath()[0].getAttribute('id') === 'request-silver-coin-price-by-gram-in-chf'
+        ? event.composedPath()[0]
+        : event.composedPath()[0].getAttribute('id') === 'request-silver-coin-price-by-pieces'
+          ? this.root.querySelector('#request-silver-coin-price-by-gram-in-chf')
+          : null
+      if (input) {
         this.root.querySelector('#silver-gram').textContent = Number(input.value * 0.835).toFixed(3)
         this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.add('show')
         this.dispatchEvent(new CustomEvent(input.getAttribute('id'), {
@@ -25,9 +29,11 @@ export default class TutorialOne extends Page {
       let resultNode
       if ((resultNode = this.root.querySelector('#' + event.detail.id))) {
         resultNode.value = (event.detail.grams * event.detail.price).toFixed(2)
+        this.root.querySelector('#answer-silver-coin-price-by-gram-in-chf-money').textContent = 'CHF ' + (resultNode.value * 0.85).toFixed(2)
         /** @type {number} */
         let marketPrice
-        this.root.querySelector('#answer-silver-coin-price-by-gram-in-chf-market').textContent = 'CHF ' + (marketPrice = (resultNode.value * 1.077).toFixed(2)) + ' ≈ CHF ' + Math.ceil(marketPrice).toFixed(2) // + 10%
+        this.root.querySelector('#answer-silver-coin-price-by-gram-in-chf-mwst').textContent = 'CHF ' + (marketPrice = (resultNode.value * 1.077).toFixed(2))
+        this.root.querySelector('#answer-silver-coin-price-by-gram-in-chf-market').textContent = 'CHF ' + Math.ceil(marketPrice).toFixed(2) // + 10%0
         this.root.querySelector('.loader.answer-silver-coin-price-by-gram-in-chf').classList.remove('show')
       }
     }
@@ -165,7 +171,9 @@ export default class TutorialOne extends Page {
         <div class="loader answer-silver-coin-price-by-gram-in-chf">Loading...</div>
         <input disabled type="number" id="answer-silver-coin-price-by-gram-in-chf" name="answer-silver-coin-price-by-gram-in-chf" placeholder="..."><span>&nbsp;CHF</span>
       </div>
-      <p class=info>+ 7.7% MWST: <span id="answer-silver-coin-price-by-gram-in-chf-market" class="important">...</span> geschätzter Tausch-/Marktwert der Münze(n)</p>
+      <p class=info>Geldkurs: Ungefährer Ankaufspreis bei <a href="https://www.schweizer-geld.ch/anlagemuenzen-schweizer-silbergeld/de/130-1" target="_blank">schweizer-geld.ch</a> ≈ <span id="answer-silver-coin-price-by-gram-in-chf-money" class="important">...</span></p>
+      <p class=info>Briefkurs: Verkaufspreis beim Goldschmied incl. 7.7% MWST ≈ <span id="answer-silver-coin-price-by-gram-in-chf-mwst" class="important">...</span></p>
+      <p class=info>geschätzter Tausch-/Marktwert ≈ <span id="answer-silver-coin-price-by-gram-in-chf-market" class="important">...</span></p>
       <p class="info small">Keine Garantie bezüglich Richtigkeit der Umrechnung.</p>
     `
   }
