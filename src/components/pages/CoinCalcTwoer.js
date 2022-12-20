@@ -34,7 +34,7 @@ export default class CoinCalcTwoer extends CoinCalcGram {
   renderHTML () {
     super.renderHTML()
 
-    this.root.querySelector('h2').textContent = '2-Fr. Stückzahl'
+    this.root.querySelector('h2').textContent = '2-Fr. Stückzahl zu Fiat-CHF'
     this.root.querySelector('#request-silver-coin-price-by-gram-in-chf').setAttribute('placeholder', '...')
     this.root.querySelector('#request-silver-coin-price-by-gram-in-chf').setAttribute('disabled', 'true')
     const div = document.createElement('div')
