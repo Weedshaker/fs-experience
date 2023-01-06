@@ -9,19 +9,27 @@ export default class NavigationCoin extends Navigation {
   constructor () {
     super()
 
+    const updateResultTimeNode = () => {
+      let resultTimeNode
+      if ((resultTimeNode = this.root.querySelector('#answer-time'))) resultTimeNode.textContent = (new Date()).toLocaleString('de-CH')
+    }
+
     this.answerUsdToChfExchangeRate = event => {
       let resultNode
       if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = Number(event.detail.rate).toFixed(2)
+      updateResultTimeNode()
     }
 
     this.answerSilverPriceByOunceInUsd = event => {
       let resultNode
       if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = Number(event.detail.price).toFixed(2)
+      updateResultTimeNode()
     }
 
     this.answerSilverPriceByGramInChfListener = event => {
       let resultNode
       if ((resultNode = this.root.querySelector('#' + event.detail.id))) resultNode.textContent = (event.detail.price * 1000).toFixed(2)
+      updateResultTimeNode()
     }
   }
 
@@ -61,17 +69,20 @@ export default class NavigationCoin extends Navigation {
         border-radius: 4px;
         padding: .5em .5em 0;
       }
+      #answer-time {
+        font-weight: bold;
+      }
       summary {
-          font-weight: bold;
-          margin: -.5em -.5em 0;
-          padding: .5em;
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
       }
       details[open] {
-          padding: .5em;
+        padding: .5em;
       }
       details[open] summary {
-          border-bottom: 1px solid var(--color);
-          margin-bottom: 1em;
+        border-bottom: 1px solid var(--color);
+        margin-bottom: 1em;
       }
       :host > nav > ul > li {
         margin-bottom: .5em;
@@ -219,9 +230,12 @@ export default class NavigationCoin extends Navigation {
           <details>
             <summary>Rettet die Schweizerfranken Silbermünzen</summary>
             Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
-            <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Trete unserer Telegramgruppe bei und tausche dich mit uns aus. Zum Beispiel: Wo es Silbermünzen zu retten gibt...</a>
+            <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Telegramgruppe</a><br><br>
+            <iframe class="gh-button" src="https://ghbtns.com/github-btn.html?user=Weedshaker&amp;repo=fs-experience&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
           </details>
-          <div id=rates>Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span> (<a href="https://exchangerate.host" target="_blank">api.exchangerate.host</a>), 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span> (<a href="https://www.monex.com/silver-prices/" target="_blank">monex.com</a>), 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
+          <br>
+          <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Trete unserer Telegramgruppe bei und tausche dich mit uns aus. Zum Beispiel: Wo es Silbermünzen zu retten gibt...</a>
+          <div id=rates><span id=answer-time>laden...</span> -> Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span> (<a href="https://exchangerate.host" target="_blank">api.exchangerate.host</a>), 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span> (<a href="https://www.monex.com/silver-prices/" target="_blank">monex.com</a>), 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
         <div>
       </nav>
     `
