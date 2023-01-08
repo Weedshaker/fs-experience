@@ -92,6 +92,10 @@ export default class NavigationCoin extends Navigation {
         padding-top: 1em;
         font-style: italic;
       }
+      :host .hint {
+        font-style: italic;
+        color: coral;
+      }
     `
   }
 
@@ -216,6 +220,17 @@ export default class NavigationCoin extends Navigation {
           </div>
           <br>
           <details>
+            <summary>Rettet die Schweizerfranken Silbermünzen</summary>
+            Die CHF-Silbermünzen sind einzigartig mit dem aufgedruckten Nominalwert, dem Silberwert und dem Münzwert. Die EUR Länder können mit Ihren traditionellen Silbermünzen nicht mehr bezahlen, doch als Eidgenosse haben wir das Privileg mit unserem wahren Geld, zwar für einen Abschlag gegenüber dem Silberpreis, immer noch ein offiziell anerkanntes Zahlungsmittel in Form von Silber zu haben.
+            Es ist enorm einfach die Echtheit der Münzen zu eruieren, da alle 0.50 bis 5.00 CHF Münzen bis und mit dem Jahrgang 1967 mindestens 83.5% Silbergehalt haben.
+            Auch Silber selbst ist ein sehr stabiles Zahlungsmittel, 1920 kriegte man gleich viel Nahrungsmittel für 10g Silber wie heutzutage.
+            Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
+            Goldschmiede schmelzen wöchentlich kiloweise Silbermünzen ein. Frage deinen lokalen Goldschmied bezüglich Verkauf von Silbermünzen und tausche dich in unserer Community darüber aus 👇<br><br>
+            <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Telegramgruppe</a><br><br>
+            <iframe class="gh-button" src="https://ghbtns.com/github-btn.html?user=Weedshaker&amp;repo=fs-experience&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
+          </details>
+          <br>
+          <details>
             <summary>Quellen - Externe Links</summary>
             <ol>
               <li><a href="https://www.swissmint.ch/swissmint/de/home/dokumentation/muenzkunde/160-jahre-ch-muenzwesen.html" target=_blank>160 Jahre Schweizerisches Münzwesen - Ein kurzer historischer Abriss</a></li>
@@ -227,15 +242,7 @@ export default class NavigationCoin extends Navigation {
             </ol>
           </details>
           <br>
-          <details>
-            <summary>Rettet die Schweizerfranken Silbermünzen</summary>
-            Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
-            Goldschmiede schmelzen wöchentlich kiloweise Silbermünzen ein. Frage deinen lokalen Goldschmied bezüglich Verkauf von Silbermünzen und tausche dich in unserer Community darüber aus 👇<br><br>
-            <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Telegramgruppe</a><br><br>
-            <iframe class="gh-button" src="https://ghbtns.com/github-btn.html?user=Weedshaker&amp;repo=fs-experience&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
-          </details>
-          <br>
-          <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Trete unserer Telegramgruppe bei und tausche dich mit uns aus. Zum Beispiel: Wo es Silbermünzen zu retten gibt...</a>
+          <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank" class=hint>Trete unserer Telegramgruppe bei und tausche dich mit uns aus. Zum Beispiel: Wo es Silbermünzen zu retten gibt...</a>
           <div id=rates><span id=answer-time>laden...</span> -> Kurse: 1&nbsp;USD&nbsp;=&nbsp;CHF&nbsp;<span id=answer-usd-to-chf-exchange-rate>laden...</span> (<a href="https://exchangerate.host" target="_blank">api.exchangerate.host</a>), 1&nbsp;Troy&nbsp;Unze&nbsp;Silber&nbsp;=&nbsp;USD&nbsp;<span id=answer-silver-price-by-ounce-in-usd>laden...</span> (<a href="https://www.monex.com/silver-prices/" target="_blank">monex.com</a>), 1kg&nbsp;Silber&nbsp;=&nbsp;CHF&nbsp;<span id=answer-silver-price-by-gram-in-chf>laden...</span></div>
         <div>
       </nav>
