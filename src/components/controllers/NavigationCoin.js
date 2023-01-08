@@ -116,7 +116,7 @@ export default class NavigationCoin extends Navigation {
           <div class="source no-bg">
             <details>
               <summary>* Unterstützte Silbermünzen <span class="tiny hint">(grundsätzlich alle Jahrgänge bis und mit 1967)</span></summary>
-              <p>Die unten aufgeführten Silbermünzen sind die mit dem grössten Vorkommen und einem prozentual gleichen Silbergehalt. Jahrgänge bis und mit 1967. Ältere Jahrgänge als die unten aufgeführten Silbermünzen können unter der Quelle der jeweiligen Stückelung nachgeschaut werden. Diese sind auch aus Silber, jedoch haben sie mehr Silber in Gewicht.</p>
+              <p>Die unten aufgeführten Silbermünzen sind die mit dem grössten Vorkommen und einem prozentual gleichen Silbergehalt. Grundsätzlich alle Jahrgänge bis und mit 1967, wobei ältere Jahrgänge, als die unten aufgeführten Silbermünzen, abweichen können. Die Details zu den abweichenden Jahrgängen sind unter der Quelle der jeweiligen Stückelung aufgelistet. Diese sind auch aus Silber, jedoch haben sie mehr Silbergehalt in Gramm.</p>
               <div class=table>
                 <table border="1">
                   <thead>
