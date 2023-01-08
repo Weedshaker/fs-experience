@@ -224,7 +224,7 @@ export default class NavigationCoin extends Navigation {
           <br>
           <details>
             <summary>Rettet die CHF-Silbermünzen</summary>
-            Die CHF-Silbermünzen (grundsätzlich alle Jahrgänge bis und mit 1967) sind einzigartig mit dem aufgedruckten Nominalwert, dem Silberwert und dem Münzwert. Die EUR Länder können mit Ihren traditionellen Silbermünzen nicht mehr bezahlen, doch als Eidgenosse haben wir das Privileg mit unserem wahren Geld, zwar für einen Abschlag gegenüber dem Silberpreis, immer noch ein offiziell anerkanntes Zahlungsmittel in Form von Silber zu haben.
+            Die CHF-Silbermünzen <span class="tiny hint">(grundsätzlich alle Jahrgänge bis und mit 1967)</span> sind einzigartig mit dem aufgedruckten Nominalwert, dem Silberwert und dem Münzwert. Die EUR Länder können mit Ihren traditionellen Silbermünzen nicht mehr bezahlen, doch als Eidgenosse haben wir das Privileg mit unserem wahren Geld, zwar für einen Abschlag gegenüber dem Silberpreis, immer noch ein offiziell anerkanntes Zahlungsmittel in Form von Silber zu haben.
             Es ist enorm einfach die Echtheit der Münzen zu eruieren, da alle 0.50 bis 5.00 CHF Münzen bis und mit dem Jahrgang 1967 mindestens 83.5% Silbergehalt haben.
             Auch Silber selbst ist ein sehr stabiles Zahlungsmittel, 1920 kriegte man gleich viel Nahrungsmittel für 10g Silber wie heutzutage.
             Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
