@@ -116,7 +116,7 @@ export default class NavigationCoin extends Navigation {
           <div class="source no-bg">
             <details>
               <summary>* Unterstützte Silbermünzen <span class="tiny hint">(grundsätzlich alle Jahrgänge bis und mit 1967)</span></summary>
-              <p>Die unten aufgeführten Silbermünzen sind die mit dem grössten Vorkommen und einem prozentual gleichen Silbergehalt. Grundsätzlich alle Jahrgänge bis und mit 1967, wobei ältere Jahrgänge, als die unten aufgeführten Silbermünzen, abweichen können. Die Details zu den abweichenden Jahrgängen sind unter der Quelle der jeweiligen Stückelung aufgelistet. Diese sind auch aus Silber, jedoch haben sie mehr Silbergehalt in Gramm.</p>
+              <p>Die unten aufgeführten Silbermünzen sind die mit dem grössten Vorkommen und einem prozentual gleichen Silbergehalt. Grundsätzlich alle Jahrgänge bis und mit 1967, wobei ältere Jahrgänge, als die unten aufgelisteten Silbermünzen, im Silbergehalt abweichen können.</p>
               <div class=table>
                 <table border="1">
                   <thead>
@@ -218,14 +218,15 @@ export default class NavigationCoin extends Navigation {
                     </tr>
                   </tbody>
                 </table>
+                <p>Die Details zu den abweichenden, älteren Jahrgängen sind unter der Quelle der jeweiligen Stückelung zu finden. Diese sind auch aus Silber, jedoch haben sie mehr Silbergehalt in Gramm.</p>
               </div>
             </details>
           </div>
           <br>
           <details>
             <summary>Rettet die CHF-Silbermünzen</summary>
-            Die CHF-Silbermünzen <span class="tiny hint">(grundsätzlich alle Jahrgänge bis und mit 1967)</span> sind einzigartig mit dem aufgedruckten Nominalwert, dem Silberwert und dem Münzwert. Die EUR Länder können mit Ihren traditionellen Silbermünzen nicht mehr bezahlen, doch als Eidgenosse haben wir das Privileg mit unserem wahren Geld, zwar für einen Abschlag gegenüber dem Silberpreis, immer noch ein offiziell anerkanntes Zahlungsmittel in Form von Silber zu haben.
-            Es ist enorm einfach die Echtheit der Münzen zu eruieren, da alle 0.50 bis 5.00 CHF Münzen bis und mit dem Jahrgang 1967 mindestens 83.5% Silbergehalt haben.
+            Die CHF-Silbermünzen <span class="tiny hint">(grundsätzlich alle Jahrgänge bis und mit 1967)</span> sind einzigartig mit dem aufgedruckten Nominalwert, dem Silberwert und dem Münzwert. Die EUR-Länder können mit Ihren traditionellen Silbermünzen nicht mehr bezahlen, doch als Eidgenosse haben wir das Privileg mit unserem wahren Geld, zwar für einen Abschlag gegenüber dem Silberpreis, immer noch ein offiziell anerkanntes Zahlungsmittel in Form von Silber zu haben.<br><br>
+            Es ist einfach die Echtheit (den Silbergehalt) der Münzen zu eruieren, da alle 0.50 bis 5.00 CHF Münzen bis und mit dem Jahrgang 1967 mindestens 83.5% Silbergehalt haben.<br><br>
             Auch Silber selbst ist ein sehr stabiles Zahlungsmittel, 1920 kriegte man gleich viel Nahrungsmittel für 10g Silber wie heutzutage.
             Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
             Goldschmiede schmelzen wöchentlich kiloweise Silbermünzen ein. Frage deinen lokalen Goldschmied bezüglich Verkauf von Silbermünzen und tausche dich in unserer Community darüber aus 👇<br><br>
