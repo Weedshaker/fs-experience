@@ -230,6 +230,7 @@ export default class NavigationCoin extends Navigation {
           <details>
             <summary>Rettet die Schweizerfranken Silbermünzen</summary>
             Jede gerettete Münze zählt und ist ein Schritt in die Unabhängigkeit von den digitalen Währungen <a href="https://uncutnews.ch/digitale-waehrung-die-fed-bewegt-sich-auf-einen-monetaeren-totalitarismus-zu-iwf-plant-die-einrichtung-eines-pix-fednow-fuer-cbdcs-auf-der-ganzen-welt/" target="_blank">CBDC's!</a><br><br>
+            Goldschmiede schmelzen wöchentlich kiloweise Silbermünzen ein. Frage deinen lokalen Goldschmied bezüglich Verkauf von Silbermünzen und tausche dich in unserer Community darüber aus 👇<br><br>
             <a href="https://t.me/+sN4PGJ0wlvkyNTJk" target="_blank">Telegramgruppe</a><br><br>
             <iframe class="gh-button" src="https://ghbtns.com/github-btn.html?user=Weedshaker&amp;repo=fs-experience&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
           </details>
