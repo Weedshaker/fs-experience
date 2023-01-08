@@ -87,7 +87,7 @@ export default class Navigation extends Shadow() {
         width: 1.5em;
       }
       :host .source p {
-        text-shadow: 0.15em 0.15em 0.3em var(--a-color);
+        text-shadow: 0.02em 0.02em 0.02em var(--a-color);
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         nav {
