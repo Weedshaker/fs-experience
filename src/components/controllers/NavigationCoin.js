@@ -242,6 +242,8 @@ export default class NavigationCoin extends Navigation {
               <li><a href="https://www.macrotrends.net/1470/historical-silver-prices-100-year-chart" target=_blank>Historischer Silberpreis in Troy Unzen (1 Unze === 31.10 Gramm) - Höchststand von 1980 ca. $4'800/kg - Tiefststand von 1931 ca. $190/kg</a></li>
               <li><a href="https://www.schweizer-geld.ch/" target=_blank>schweizer-geld.ch</a></li>
               <li><a href="https://www.numis.ch/schweizer-muenzen/5-franken-1931-1969/index.php" target=_blank>Auflagen in Mio.</a></li>
+              <li><a href="https://rechtsmaerchen.de/2020/09/29/das-schwert-der-wahrheit/" target=_blank>Rechtsmärchen - Das Schwert der Wahrheit</a></li>
+              <li><a href="https://www.corbettreport.com/federalreserve/" target=_blank>Century of Enslavement: The History of The Federal Reserve</a></li>
               <li><a href="https://de.wikipedia.org/wiki/Fiatgeld" target=_blank>Fiatgeld</a></li>
             </ol>
           </details>
