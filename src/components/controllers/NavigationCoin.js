@@ -236,7 +236,7 @@ export default class NavigationCoin extends Navigation {
           <details>
             <summary>Quellen - Externe Links</summary>
             <ol>
-              <li><a href="#/parlament-video" alt-href="#/">Lukas Reimann Rede zur Goldinitative: "Ungedecktes Geld ist der grosse Betrug unserer Zeit"</a></li>
+              <li><a href="#/parlament-video" alt-href="#/">Lukas Reimann Rede zur Goldinitiative: "Ungedecktes Geld ist der grosse Betrug unserer Zeit"</a></li>
               <li><a href="https://www.swissmint.ch/swissmint/de/home/dokumentation/muenzkunde/160-jahre-ch-muenzwesen.html" target=_blank>160 Jahre Schweizerisches Münzwesen - Ein kurzer historischer Abriss</a></li>
               <li><a href="https://www.swissmint.ch/dam/swissmint/de/dokumente/dokumentation/numis-berichte/5liber-burkhard.pdf.download.pdf/5liber-burkhard.pdf" target=_blank>PAUL BURKHARD UND DER FÜNFLIBER - PRÄGEVARIANTEN BEI DEN 5-FR.-STÜCKEN</a></li>
               <li><a href="https://www.macrotrends.net/1470/historical-silver-prices-100-year-chart" target=_blank>Historischer Silberpreis in Troy Unzen (1 Unze === 31.10 Gramm) - Höchststand von 1980 ca. $4'800/kg - Tiefststand von 1931 ca. $190/kg</a></li>

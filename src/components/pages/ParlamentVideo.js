@@ -33,7 +33,7 @@ export default class ParlamentVideo extends Page {
 
   renderHTML () {
     this.html = /* HTML */`
-      <h1>Lukas Reimann Rede zur Goldinitative:</h1>
+      <h1>Lukas Reimann Rede zur Goldinitiative:</h1>
       <h2>"Ungedecktes Geld ist der grosse Betrug unserer Zeit"</h2>
       <p><a href="https://www.efd.admin.ch/efd/de/home/das-efd/abstimmungen/initiative--rettet-unser-schweizer-gold--gold-initiative----30-1.html" target=_blank>Das Volk ist den Empfehlungen des Bundesrates gefolgt und hat die Initiative mit 77.3 Prozent Nein-Stimmen abgelehnt.</a><br><br>Jedoch können und dürfen wir uns selbst retten mit Silbermünzen...</p>
       <video loading="lazy" controls autoplay loop>
