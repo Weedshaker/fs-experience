@@ -122,8 +122,8 @@ export default class PriceApi extends HTMLElement {
     return new Promise(resolve => {
       let rate
       if ((rate = this.getItem('usdToChfExchangeRate', 'sessionStorage', this.timeLimitUsdExchange))) return resolve(rate)
-      fetch("https://api.exchangerate.host/convert?from=USD&to=CHF").then(res => res.json()).then(json => {
-        rate = json.info.rate
+      fetch("https://api.frankfurter.app/latest?amount=1&from=USD&to=CHF").then(res => res.json()).then(json => {
+        rate = json.rates.CHF
         this.setItem('usdToChfExchangeRate', rate)
         this.requestUsdToChfExchangeRate()
         return resolve(rate)
